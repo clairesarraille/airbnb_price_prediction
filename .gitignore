@@ -398,7 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Mac .dstore
-.DStore
+.DS_store
 
 # Ignore Raw Data folder:
 /listing_raw_data
