@@ -48,13 +48,23 @@ This study uses [listing data](http://insideairbnb.com/get-the-data/) scraped fr
 Because my dataset had high multicollinearity that couldn't be completely eliminated, and because this is a regression problem as the target variable is continuous, I used Ridge and Lasso Regression rather than simple linear regression. Multicollinearity occurs when there is a strong correlation between two or more identified predictor variables in a multiple regression model. The existence of this phenomenon may seriously impair the analysis's overall quality and severely restrict the model evaluation's conclusions. I knew I wanted to begin this analysis by addressing the issue of multicollinearity, because one of the assumptions of linear modeling is that all predictors are independent of each other (meaning there is no multicollinearity). Ridge and Lasso regression models were used because they make use of regularization strategies to mitigate multicollinearity's negative impact on the model's quality and validity of conclusions. The generalization of models with incredibly complex relationships is supported by regularization strategies such as Ridge and Lasso Regression. One feature of a highly complex model may be multicollinearity. Overfitting is avoided by regularizing the model predictors with a penalty.
 
 # Results:
-- I was able to reduce the distance between my predicted results and the real price (RMSE) with each successive model. I was also able to increase how much variability in my target value is explained by my data (R2). However, my results are still sub-par. A R-Squared value of .36 means that 64% of the variation in price is explained by data that is NOT in my dataset.
+### Discussion:
+- I was able to reduce the distance between my predicted results and the real price (RMSE) with each successive model. I was also able to increase how much variability in my target value is explained by my data (R2). However, my results are still sub-par. My final R-Squared value of .38 means that 62% of the variation in price is explained by data that is NOT in my dataset. Only 32% of the variability in price is explained by my available data.
+- I won't discount the success of seeing that Ridge Regression performed a bit better than Lasso Regression - R2 was improved by about 3%, and error was reduced by about 1%. My final model improved from Lasso Regression by 8% for R2 value and there was a 4% reduction in the RMSE value.
+
+## Results from each Model Iteration:
 - Lasso Regression:
   - RMSE: 268
   - R-Squared: 0.35
 - Ridge Regression:
   - RMSE: 265
   - R-Squared: 0.36
+- Final Model, Ridge Regression with hyperparameters tuned:
+  - Optimized Hyperparameters via GridSearchCV:
+    - alpha=10
+    - solver=svd
+  - RMSE: 258
+  - R-Squared: 0.38
 
 
 # Conclusion:
