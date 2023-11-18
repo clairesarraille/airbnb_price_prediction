@@ -34,7 +34,7 @@ The problem is that first-time hosts looking to set the price of their first-eve
 This study uses [listing data](http://insideairbnb.com/get-the-data/) scraped from Airbnb's website in September 2023, compiled by the organization [*Inside Airbnb*](http://insideairbnb.com/about/). "Inside Airbnb is a mission-driven project that provides data and advocacy about Airbnb's impact on residential communities." As a side note, they also produce fascinating studies such as [A Year Later: Airbnb as a Racial Gentrification Tool](http://insideairbnb.com/research/a-year-later-airbnb-as-a-racial-gentrification-tool).
 
 ## Extent of Data:
-- Listings from 32 cities from 20 states in the U.S. There are over 270,000 listings. My final set of cleaned and pre-processed attributes include amenities, location, beds, bathrooms, property type, room type, and the polarity/subjectivity of the description of the host, property, and neighborhood.
+- Listings from 32 cities from 20 states in the U.S. There are over 270,000 listings. My final set of cleaned and pre-processed attributes include amenities, location, beds, bathrooms, property type, room type, and the polarity/subjectivity of the description of the host, property, and neighborhood. My final count of listings that I use for modeling after duplicates and outlier removal is 274,234.
 
 # Sources:
 - Alharbi, Zahyah. (2023). [A Sustainable Price Prediction Model for Airbnb Listings Using Machine Learning and Sentiment Analysis.](https://www.researchgate.net/publication/373625586_A_Sustainable_Price_Prediction_Model_for_Airbnb_Listings_Using_Machine_Learning_and_Sentiment_Analysis) Sustainability. 15. 13159. 10.3390/su151713159.
@@ -44,3 +44,27 @@ This study uses [listing data](http://insideairbnb.com/get-the-data/) scraped fr
 Because my dataset had high multicollinearity that couldn't be completely eliminated, and because this is a regression problem as the target variable is continuous, I used Ridge and Lasso Regression rather than simple linear regression. Multicollinearity occurs when there is a strong correlation between two or more identified predictor variables in a multiple regression model. The existence of this phenomenon may seriously impair the analysis's overall quality and severely restrict the model evaluation's conclusions. I knew I wanted to begin this analysis by addressing the issue of multicollinearity, because one of the assumptions of linear modeling is that all predictors are independent of each other (meaning there is no multicollinearity). Ridge and Lasso regression models were used because they make use of regularization strategies to mitigate multicollinearity's negative impact on the model's quality and validity of conclusions. The generalization of models with incredibly complex relationships is supported by regularization strategies such as Ridge and Lasso Regression. One feature of a highly complex model may be multicollinearity. Overfitting is avoided by regularizing the model predictors with a penalty.
 
 # Results:
+- I was able to reduce the distance between my predicted results and the real price (RMSE) with each successive model. I was also able to increase how much variability in my target value is explained by my data (R2). However, my results are still sub-par. A R-Squared value of .36 means that 64% of the variation in price is explained by data that is NOT in my dataset.
+- Lasso Regression:
+  - RMSE: 268
+  - R-Squared: 0.35
+- Ridge Regression:
+  - RMSE: 265
+  - R-Squared: 0.36
+
+
+# Conclusion:
+1. My model’s performance was drastically lower compared to studies I consulted.
+   - The study's superior model performance indicates that there is something wrong with my feature selection (missing review data) -- which would have to change my business problem.
+2. There weren’t great gains in model performance were achieved: Lasso->Ridge->Tuned Ridge
+
+
+# Recommendations and Next Steps:
+1. Tweak Approach to Problem:
+   - Which features are most important for highest priced listings?
+   - Subset by attributes listers can’t change like location and property type.
+   - Different models for each city or region.
+2. More Data:
+   - Review Data
+   - Additional Amenities
+3. Use Spatial Auto-correlation for lat/long values
