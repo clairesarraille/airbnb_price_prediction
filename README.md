@@ -6,25 +6,28 @@
 - Welcome to my Airbnb price prediction study! This project's goal is to predict a realistic price for new Airbnb hosts to use to estimate the value of their first listing.
 
 # Repo Guide:
-- Here's a guide to my GitHub Repo so that you can explore and more importantly, *re-produce* my findings:
-  - `notebook_01_data_cleaning.ipynb` covers data intake and file merging. `notebook_02_data_cleaning.ipynb` contains data cleaning and data munging work. `notebook_02_data_cleaning.ipynb` contains the data pre-processing, pipeline creating and model building code.
-  - You'll also find development work in `Dev_Notebooks`
-  - All raw data is contained in the zipped file `listing_raw_data.zip`
-  - The cleaned dataset that is intended to be loaded into Google Colab from the file's raw link is `airbnb_data.csv`
-
-# Repo Map:
-```
-├── CAPSTONE_PRESENTATION .pdf
-├── Dev_Notebooks
-├── LICENSE
-├── README.md
-├── airbnb_data.csv
-├── listing_raw_data.zip
-├── notebook_01_data_cleaning.ipynb
-├── notebook_02_data_cleaning.ipynb
-└── notebook_03_modeling.ipynb
-
-```
+## I strive to provide enough info so you can *reproduce* my findings
+### Please note that this project is meant to run entirely in [*Google Colab*](https://colab.research.google.com/).
+### Please see instruction in each notebook for uploading data to GitHub using [Git LFS](https://git-lfs.com/) and pickling datasets that take a long time to run in Google Colab.
+1. **CAPSTONE_PRESENTATION.pdf**
+   - *Presentation to stakeholders*
+2. **notebook_01_data_cleaning**
+   - *data intake and file merging*
+3. **notebook_02_data_cleaning**
+   - *cleaning and data munging work*
+4. **notebook_03_modeling**
+   - *data pre-processing, pipeline creation and model building code*
+5. **airbnb_data.csv**
+   - *cleaned dataset produced in notebook_01_data_cleaning* 
+6. **listing_raw_data.zip**
+   - *raw files downloaded from [Inside Airbnb](http://insideairbnb.com/get-the-data/) for all US cities available.*
+   - *I downloaded each csv and made sure NOT TO OPEN THEM IN EXCEL* before loading them as Pandas dataframes"*
+   - *Opening csvs in Excel that you intend to process using Python can convert large values into scientific notation, corrupt unique id strings, etc, and is not advised*
+7. **README.md**
+8. **Dev_Notebooks**
+   - *explorations of data cleaning in postgreSQL, regex strategies for data cleaning, etc*
+9. **to_do.md**
+    - *this project is still in progress -- here are my next steps COMING SOON*
 
 # Business Case:
 Currently, "The majority (of hosts) go with their own research, knowhow and gut," according to an Airbnb representative in Winter 2023. Experience and domain knowledge for type of property, location, and setting are of paramount importance for setting realistic prices.

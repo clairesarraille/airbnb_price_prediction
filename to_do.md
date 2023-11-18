@@ -1,3 +1,4 @@
+- Double check that results can be fully re-produced - and add any instructions that are not crystal-clear
 - Double check train/test splits used
 - Re-run grid search to make sure have best hyperparameters
   - If need, update presentation, notebook and readme
