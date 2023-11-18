@@ -24,7 +24,7 @@
 
 # Business Case:
 Currently, "The majority (of hosts) go with their own research, knowhow and gut," according to an Aibnbirbnb representative in Winter 2023. Experience and domain knowledge for type of property, location, and setting are of paramount importance for setting realistic prices.
-The problem is that first-time hosts looking to set the price of their first-ever listing don't have reviews or experience from pior properties. To put it simply, first-time hosts lack the wisdome of experience to draw upon, and new listings lack data!
+The problem is that first-time hosts looking to set the price of their first-ever listing don't have reviews or experience from pior properties. To put it simply, first-time hosts lack the wisdome of experience to draw upon, and new listings lack the on-going feedback that review data provides. 
 
 # Use Cases:
 1. Sustainable Price-setting
@@ -50,7 +50,7 @@ Because my dataset had high multicollinearity that couldn't be completely elimin
 # Results:
 ### Discussion:
 - I was able to reduce the distance between my predicted results and the real price (RMSE) with each successive model. I was also able to increase how much variability in my target value is explained by my data (R2). However, my results are still sub-par. My final R-Squared value of .38 means that 62% of the variation in price is explained by data that is NOT in my dataset. Only 32% of the variability in price is explained by my available data.
-- I won't discount the success of seeing that Ridge Regression performed a bit better than Lasso Regression - R2 was improved by about 3%, and error was reduced by about 1%. My final model improved from Lasso Regression by 8% for R2 value and there was a 4% reduction in the RMSE value.
+- I won't discount the success of seeing that Ridge Regression performed a bit better than Lasso Regression - R2 was improved by about 3%, and error was reduced by about 1%. My final model, tuned via GridSearchCV, improved from Lasso Regression by 8% for R2 value and there was a 4% reduction in the RMSE value.
 
 ## Results from each Model Iteration:
 - Lasso Regression:
