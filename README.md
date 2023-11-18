@@ -10,14 +10,16 @@
 
 # Repo Map:
 ```
+├── CAPSTONE_PRESENTATION .pdf
 ├── Dev_Notebooks
 ├── LICENSE
 ├── README.md
 ├── airbnb_data.csv
+├── listing_raw_data.zip
 ├── notebook_01_data_cleaning.ipynb
 ├── notebook_02_data_cleaning.ipynb
-├── notebook_03_modeling.ipynb
-└── readme_images
+└── notebook_03_modeling.ipynb
+
 ```
 
 # Business Case:
