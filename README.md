@@ -1,4 +1,4 @@
-![intro_image]('/Users/claire/git/flatiron/capstone/airbnb_price_prediction/readme_images/Airbnb Price Prediction Project.jpg')
+[<img src="/Users/claire/git/flatiron/capstone/airbnb_price_prediction/readme_images/Airbnb Price Prediction Project.jpg">]([https://link-to-your-URL/](https://github.com/clairesarraille/airbnb_price_prediction/blob/main/readme_images/Airbnb%20Price%20Prediction%20Project.jpg))
 
 
 
