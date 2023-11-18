@@ -1,0 +1,14 @@
+- Re-run grid search to make sure have best hyperparameters
+  - If need, update presentation, notebook and readme
+- Update presentation notes and save with notes
+- Save presentation w/out notes
+- Proceed with listing data for 1st-time hosts/new listings study:
+  - Try sub-setting by location
+  - Spatial auto-correlation on lat/long
+  - More EDS graphs
+  - Visuals for results
+  - Function to record results and compare
+  - More work on exploring multi-collinearity and heteroscedasticity -- PCA, VIF
+  - Ensemble methods
+  - Include more amenities
+  - Feature sub-setting
