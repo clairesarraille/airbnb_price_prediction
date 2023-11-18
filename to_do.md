@@ -14,3 +14,7 @@
   - Ensemble methods
   - Include more amenities
   - Feature sub-setting
+- Deployment in AWS
+- Re-order README to have logical flow (define business case and data first before repo guide and re-production instructions
+)
+- Maybe separate document for re-production instructions
