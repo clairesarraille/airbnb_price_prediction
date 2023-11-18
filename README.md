@@ -1,3 +1,8 @@
+![intro_image]('/Users/claire/git/flatiron/capstone/airbnb_price_prediction/readme_images/Airbnb Price Prediction Project.jpg')
+
+
+
+
 # Introduction:
 - Welcome to my Airbnb price prediction study! This project's goal is to predict a realistic price for new Airbnb hosts to use to estimate the value of their first listing.
 
