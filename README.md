@@ -5,7 +5,7 @@
 - Here's a guide to my GitHub Repo so that you can explore and more importantly, *re-produce* my findings:
   - `notebook_01_data_cleaning.ipynb` covers data intake and file merging. `notebook_02_data_cleaning.ipynb` contains data cleaning and data munging work. `notebook_02_data_cleaning.ipynb` contains the data pre-processing, pipeline creating and model building code.
   - You'll also find development work in `Dev_Notebooks`
-  - All raw data is contained in the zipped file `listing_raw_data-1.zip`
+  - All raw data is contained in the zipped file `listing_raw_data.zip`
   - The cleaned dataset that is intended to be loaded into Google Colab from the file's raw link is `airbnb_data.csv`
 
 # Repo Map:
