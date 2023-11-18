@@ -1,11 +1,25 @@
 # Introduction:
 - Welcome to my Airbnb price prediction study! This project's goal is to predict a realistic price for new Airbnb hosts to use to estimate the value of their first listing.
 
-- Here's a guide to my GitHub Repo.
-  - The first two notebooks cover data intake, data cleaning and data munging. The third notebook models price using Ridge and Lasso Regression.
+# Repo Guide:
+- Here's a guide to my GitHub Repo so that you can explore and more importantly, *re-produce* my findings:
+  - `notebook_01_data_cleaning.ipynb` covers data intake and file merging. `notebook_02_data_cleaning.ipynb` contains data cleaning and data munging work. `notebook_02_data_cleaning.ipynb` contains the data pre-processing, pipeline creating and model building code.
+  - You'll also find development work in `Dev_Notebooks`
+  - All raw data is contained in the zipped file `listing_raw_data-1.zip`
+  - The cleaned dataset that is intended to be loaded into Google Colab from the file's raw link is `airbnb_data.csv`
+
+# Repo Map:
+├── Dev_Notebooks
+├── LICENSE
+├── README.md
+├── airbnb_data.csv
+├── notebook_01_data_cleaning.ipynb
+├── notebook_02_data_cleaning.ipynb
+├── notebook_03_modeling.ipynb
+└── readme_images
 
 # Business Case:
-Currently, "The majority (of hosts) go with their own research, knowhow and gut," according to an Aibnb representative in Winter 2023. Experience and domain knowledge for type of property, location, and setting are of paramount importance for setting realistic prices.
+Currently, "The majority (of hosts) go with their own research, knowhow and gut," according to an Aibnbirbnb representative in Winter 2023. Experience and domain knowledge for type of property, location, and setting are of paramount importance for setting realistic prices.
 The problem is that first-time hosts looking to set the price of their first-ever listing don't have reviews or experience from pior properties. To put it simply, first-time hosts lack the wisdome of experience to draw upon, and new listings lack data!
 
 # Use Cases:
@@ -14,3 +28,19 @@ The problem is that first-time hosts looking to set the price of their first-eve
 - I ask this question: What price will consistently attract customers tiven the attributes of a new listing? Our answer comes from modeling existing listing data, which in essence "Crowd Sources" the collective wisdom of all Airbnb hosts.
 2. New Listings - Do they have enough data?
 - I ask a second question to guide this research: Do the variables that exist for new listings belonging to new hosts have enough "signal" for a predictive model? The attributes of a new listing lacks signal from review data that could be modeled as a time-series analysis based on changes in the listing. I want to get insight around this question: Does the limited aspect of new listing data hinder the ability of machine learning algorithms to accurately predict price?
+
+
+# Data Understanding:
+This study uses [listing data](http://insideairbnb.com/get-the-data/) scraped from Airbnb's website in September 2023, compiled by the organization [*Inside Airbnb*](http://insideairbnb.com/about/). "Inside Airbnb is a mission-driven project that provides data and advocacy about Airbnb's impact on residential communities." As a side note, they also produce fascinating studies such as [A Year Later: Airbnb as a Racial Gentrification Tool](http://insideairbnb.com/research/a-year-later-airbnb-as-a-racial-gentrification-tool).
+
+## Extent of Data:
+- Listings from 32 cities from 20 states in the U.S. There are over 270,000 listings. My final set of cleaned and pre-processed attributes include amenities, location, beds, bathrooms, property type, room type, and the polarity/subjectivity of the description of the host, property, and neighborhood.
+
+# Sources:
+- Alharbi, Zahyah. (2023). [A Sustainable Price Prediction Model for Airbnb Listings Using Machine Learning and Sentiment Analysis.](https://www.researchgate.net/publication/373625586_A_Sustainable_Price_Prediction_Model_for_Airbnb_Listings_Using_Machine_Learning_and_Sentiment_Analysis) Sustainability. 15. 13159. 10.3390/su151713159.
+- Brownlee, Jason. (2016). Master Machine Learning Algorithms. Edition, v1.15.
+
+# Modeling Process
+Because my dataset had high multicollinearity that couldn't be completely eliminated, and because this is a regression problem as the target variable is continuous, I used Ridge and Lasso Regression rather than simple linear regression. Multicollinearity occurs when there is a strong correlation between two or more identified predictor variables in a multiple regression model. The existence of this phenomenon may seriously impair the analysis's overall quality and severely restrict the model evaluation's conclusions. I knew I wanted to begin this analysis by addressing the issue of multicollinearity, because one of the assumptions of linear modeling is that all predictors are independent of each other (meaning there is no multicollinearity). Ridge and Lasso regression models were used because they make use of regularization strategies to mitigate multicollinearity's negative impact on the model's quality and validity of conclusions. The generalization of models with incredibly complex relationships is supported by regularization strategies such as Ridge and Lasso Regression. One feature of a highly complex model may be multicollinearity. Overfitting is avoided by regularizing the model predictors with a penalty.
+
+# Results:
