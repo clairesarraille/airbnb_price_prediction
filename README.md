@@ -27,13 +27,13 @@
 ```
 
 # Business Case:
-Currently, "The majority (of hosts) go with their own research, knowhow and gut," according to an Aibnbirbnb representative in Winter 2023. Experience and domain knowledge for type of property, location, and setting are of paramount importance for setting realistic prices.
-The problem is that first-time hosts looking to set the price of their first-ever listing don't have reviews or experience from pior properties. To put it simply, first-time hosts lack the wisdome of experience to draw upon, and new listings lack the on-going feedback that review data provides. 
+Currently, "The majority (of hosts) go with their own research, knowhow and gut," according to an Airbnb representative in Winter 2023. Experience and domain knowledge for type of property, location, and setting are of paramount importance for setting realistic prices.
+The problem is that first-time hosts looking to set the price of their first-ever listing don't have reviews or experience from prior properties. To put it simply, first-time hosts lack the wisdom of experience to draw upon, and new listings lack the on-going feedback that review data provides. 
 
 # Use Cases:
 1. Sustainable Price-setting
 - By a sustainable price, I mean one that is realistic and will attract customers given the listing's attributes.
-- I ask this question: What price will consistently attract customers tiven the attributes of a new listing? Our answer comes from modeling existing listing data, which in essence "Crowd Sources" the collective wisdom of all Airbnb hosts.
+- I ask this question: What price will consistently attract customers given the attributes of a new listing? Our answer comes from modeling existing listing data, which in essence "Crowd Sources" the collective wisdom of all Airbnb hosts.
 2. New Listings - Do they have enough data?
 - I ask a second question to guide this research: Do the variables that exist for new listings belonging to new hosts have enough "signal" for a predictive model? The attributes of a new listing lacks signal from review data that could be modeled as a time-series analysis based on changes in the listing. I want to get insight around this question: Does the limited aspect of new listing data hinder the ability of machine learning algorithms to accurately predict price?
 
@@ -49,7 +49,7 @@ This study uses [listing data](http://insideairbnb.com/get-the-data/) scraped fr
 - Brownlee, Jason. (2016). Master Machine Learning Algorithms. Edition, v1.15.
 
 # Modeling Process
-Because my dataset had high multicollinearity that couldn't be completely eliminated, and because this is a regression problem as the target variable is continuous, I used Ridge and Lasso Regression rather than simple linear regression. Multicollinearity occurs when there is a strong correlation between two or more identified predictor variables in a multiple regression model. The existence of this phenomenon may seriously impair the analysis's overall quality and severely restrict the model evaluation's conclusions. I knew I wanted to begin this analysis by addressing the issue of multicollinearity, because one of the assumptions of linear modeling is that all predictors are independent of each other (meaning there is no multicollinearity). Ridge and Lasso regression models were used because they make use of regularization strategies to mitigate multicollinearity's negative impact on the model's quality and validity of conclusions. The generalization of models with incredibly complex relationships is supported by regularization strategies such as Ridge and Lasso Regression. One feature of a highly complex model may be multicollinearity. Overfitting is avoided by regularizing the model predictors with a penalty.
+Because my dataset had high Multicollinearity that couldn't be completely eliminated, and because this is a regression problem as the target variable is continuous, I used Ridge and Lasso Regression rather than simple linear regression. Multicollinearity occurs when there is a strong correlation between two or more identified predictor variables in a multiple regression model. The existence of this phenomenon may seriously impair the analysis's overall quality and severely restrict the model evaluation's conclusions. I knew I wanted to begin this analysis by addressing the issue of Multicollinearity, because one of the assumptions of linear modeling is that all predictors are independent of each other (meaning there is no Multicollinearity). Ridge and Lasso regression models were used because they make use of regularization strategies to mitigate Multicollinearity's negative impact on the model's quality and validity of conclusions. The generalization of models with incredibly complex relationships is supported by regularization strategies such as Ridge and Lasso Regression. One feature of a highly complex model may be Multicollinearity. Overfitting is avoided by regularizing the model predictors with a penalty.
 
 # Results:
 ### Discussion:
@@ -64,7 +64,7 @@ Because my dataset had high multicollinearity that couldn't be completely elimin
   - RMSE: 265
   - R-Squared: 0.36
 - Final Model, Ridge Regression with hyperparameters tuned:
-  - Optimized Hyperparameters via GridSearchCV:
+  - Optimized hperparameters via GridSearchCV:
     - alpha=10
     - solver=svd
   - RMSE: 258
