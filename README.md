@@ -9,6 +9,7 @@
   - The cleaned dataset that is intended to be loaded into Google Colab from the file's raw link is `airbnb_data.csv`
 
 # Repo Map:
+```
 ├── Dev_Notebooks
 ├── LICENSE
 ├── README.md
@@ -17,6 +18,7 @@
 ├── notebook_02_data_cleaning.ipynb
 ├── notebook_03_modeling.ipynb
 └── readme_images
+```
 
 # Business Case:
 Currently, "The majority (of hosts) go with their own research, knowhow and gut," according to an Aibnbirbnb representative in Winter 2023. Experience and domain knowledge for type of property, location, and setting are of paramount importance for setting realistic prices.
